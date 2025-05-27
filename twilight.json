@@ -26,20 +26,26 @@
     ],
     "settings": [
         {
+            "id": "image",
+            "type": "string",
+            "format": "image",
+            "label": "Image",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "e.g. https://hostname.com/image.png",
+            "icon": "sicon-image",
+            "value": null,
+            "required": false
+        },
+        {
             "id": "squar_photo_bg_image_size",
             "type": "items",
             "format": "dropdown-list",
-            "label": "طريقة عرض الصور في قسم قائمة عناصر ",
+            "label": "طريقة عرض الصور في قسم قائمة عناصر",
             "description": null,
             "labelHTML": null,
             "icon": "sicon-list",
-            "selected": [
-                {
-                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
-                    "value": "contain",
-                    "key": "f4adec13-6e4c-654b-b978-b2807935ced9"
-                }
-            ],
+            "selected": [],
             "options": [
                 {
                     "label": "تغطية الصورة كامل المساحة مع المحافظة على أبعاد الصورة (Cover)",
@@ -53,7 +59,10 @@
                 }
             ],
             "source": "Manual",
-            "required": true
+            "required": true,
+            "public": false,
+            "searchable": false,
+            "multichoice": false
         },
         {
             "type": "boolean",
@@ -64,13 +73,15 @@
             "format": "switch",
             "required": false,
             "value": false,
-            "selected": false
+            "selected": true,
+            "public": false
         },
         {
             "type": "boolean",
             "id": "is_more_button_enabled",
             "label": "عرض (زر الكل) في الصفحة الرئيسية",
-            "format": "switch"
+            "format": "switch",
+            "selected": true
         },
         {
             "type": "static",
@@ -104,7 +115,7 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": true
         },
         {
             "type": "boolean",
@@ -214,6 +225,24 @@
             "required": false,
             "value": false,
             "selected": false
+        },
+        {
+            "id": "title",
+            "type": "static",
+            "format": "title",
+            "label": "Title",
+            "value": null,
+            "variant": "h1",
+            "icon": "sicon-format-text"
+        },
+        {
+            "id": "title_1",
+            "type": "static",
+            "format": "title",
+            "label": "Title 1",
+            "value": null,
+            "variant": "h1",
+            "icon": "sicon-format-text"
         }
     ],
     "components": [
@@ -232,10 +261,10 @@
                     "value": "<div style='margin: -24px -20px 20px'><img class='w-full' src='https://cdn.salla.network/images/themes/raed/preview-images/images-slider-enhancement.png?v=1.1'></div>"
                 },
                 {
-                  "type": "static",
-                  "format": "description",
-                  "id": "enhance-slider-note",
-                  "value": "<div style='background-color: #ddedff;color: #0a5a90;padding: 16px 20px;font-size: 14px;border-radius: 4px; margin: 0 0 30px;'>هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
+                    "type": "static",
+                    "format": "description",
+                    "id": "enhance-slider-note",
+                    "value": "<div style='background-color: #ddedff;color: #0a5a90;padding: 16px 20px;font-size: 14px;border-radius: 4px; margin: 0 0 30px;'>هذا العنصر غير مناسب لعرض البنرات، يمكنك استخدام عنصر <strong>صور متحركة</strong> بدلاً منه لتظهر صورة البنر بشكل كامل</div>"
                 },
                 {
                     "id": "slides",
